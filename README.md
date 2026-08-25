@@ -26,11 +26,13 @@ systems/professional/         the light, institutional system
   utilities.css               the g-* component vocabulary
   taiga-bridge.css            optional: maps --tui-* onto --s9-* for Taiga UI apps
   example.html                a full reference page, self-contained
+  assets/                     wordmark
   README.md                   register, voice, palette, vocabulary
 systems/consumer/             the dark, enthusiast system
   tokens.css                  palette, type, surface treatments as --s9c-* customs
   utilities.css               the c-* component vocabulary
   example.html                a full reference page, self-contained
+  assets/                     wordmark, logomark
   README.md                   register, voice, palette, vocabulary
 ```
 
@@ -64,7 +66,7 @@ the `--tui-*` tokens resolve to Start9 values:
 **No font binaries are committed here, deliberately** — several Start9 faces are
 commercially licensed and cannot be redistributed under this repo's MIT license.
 Each system's README names its families and their licensing; obtain them from the
-foundry.
+foundry. Logos and marks are Start9's own and do ship, under `systems/*/assets/`.
 
 ## Docs
 

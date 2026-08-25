@@ -68,6 +68,22 @@ violet button to red.
 `--s9c-light-20` + `backdrop-filter`, or recedes with `--s9c-dark-20` + the
 same. The grays are for text and borders.
 
+## Assets
+
+| File                        | What it is                                                              |
+| --------------------------- | ----------------------------------------------------------------------- |
+| `assets/start9-wordmark.svg` | START9 wordmark, letters `#F0F0F0`, the 9 `#FF4961`. For dark grounds.  |
+| `assets/start9-logomark.svg` | The circled mark alone, `#F0F0F0` with `#FF4961`.                       |
+
+Both carry `width="100%" height="100%"` with the real size in `viewBox`. That is
+correct in a browser, where CSS sizes them; some rasterizers need explicit
+dimensions injected before they will render.
+
+**No ground image ships.** `c-ground` reads `--c-ground-image` and the system's
+ground is a flat gray blended over a photograph — but the image used on
+start9.com has no provenance metadata, so it is not published here. Point the
+variable at your own file.
+
 ## Vocabulary
 
 | Class                       | What it is                                                     |

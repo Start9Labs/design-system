@@ -160,6 +160,19 @@ anything; not committed here — pull it from Google Fonts or npm.
 This system has **no display face**. A heading earns its weight from size and
 hierarchy alone.
 
+## Assets
+
+`assets/start9-wordmark.svg` — the START9 wordmark, letters in `#1a1a1a`, the 9
+in `#FF4961`. Built for light grounds, which is why this copy lives here.
+
+**The red survives into this system.** The wordmark keeps `#FF4961` even though
+this palette's accent is blue. It is brand identity, not a palette value — never
+recolor it to `--s9-accent` for consistency.
+
+**There is no light-ground logomark yet.** The standalone circled mark exists
+only as a light-fill file in the consumer system. A dark variant needs a brand
+decision — near-black, red, or unchanged — so it is absent rather than guessed.
+
 ## Vocabulary
 
 | Class            | What it is                                                        |

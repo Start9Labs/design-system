@@ -36,11 +36,14 @@ belongs in the consuming app, not in the system.
 `utilities.css` or in the consuming app. Adding a token per component is how a
 design system becomes unmaintainable.
 
-**Never commit a font binary.** Two consumer families are commercially licensed
-(Colophon, Pangram Pangram) and this repo is MIT — shipping them would
-redistribute them under a license Start9 has no right to grant. Name the family
-and its foundry; let each consumer license it. This applies to any new system
-added later, and it is the reason the repo is publishable at all.
+**Never commit an asset Start9 can't relicense.** This repo is public and MIT,
+so committing a file relicenses it to everyone. Two consumer font families are
+commercially licensed (Colophon, Pangram Pangram) — name the family and its
+foundry instead, and let each consumer license it. The same test applies to
+photography, icons, and anything else acquired rather than drawn: if you cannot
+establish that Start9 owns it, it does not go in. Logos and marks are ours and
+do ship, under `systems/*/assets/`. This is the reason the repo is publishable
+at all.
 
 **Both systems are live and neither is subordinate.** Professional is not the
 successor to Consumer — they serve different audiences and both take new work.
