@@ -21,54 +21,84 @@ no metaphor, no display typography, no motion.
 Shared rules are in [`../../VOICE.md`](../../VOICE.md) and outrank anything
 here. These are the ones specific to this register.
 
+**Concede first. It is the entire persuasion engine.** Every argument gives
+ground before it asks for anything: name the thing that can't be replaced, the
+tradeoff that's real, the part of your own house that isn't in order. The
+concession is volunteered, never extracted, and it is given prominence rather
+than buried — a line in the savings table reading "no open-source corollary —
+stays" does more for the argument than any claim beside it. Design accordingly:
+a concession never gets small type, a muted color, or a footnote.
+
+**Two numbers, headline and defensible.** Lead with the strong figure, then
+volunteer the conservative one before anyone asks for it. Being the one who
+raises it is what makes the first believable. Both belong on screen together.
+
+**Every figure is sourced and dated.** A table carries the basis of each line
+and a "verified" date. Stale numbers cost the whole argument, so the design must
+leave room for the provenance rather than treating it as clutter.
+
+**The reader sets the pace.** Nothing here is a cutover or a migration project.
+The offer is a ranked queue the customer approves one item at a time, and
+sequence UI — steps, phases, queues — should read as repeatable and
+interruptible, never as a progress bar to a finish line.
+
+**Depth is calibrated to a non-technical evaluator.** The reader may be an
+office manager or a managing partner. Keep the real machinery on the page; make
+the sentence around it plain. Leaving them over their head is a failure here.
+
 **Sentence case, everywhere.** Headings, buttons, labels, nav items, table
-headers. Never Title Case. No `letter-spacing`, no `text-transform` — if a
-heading needs shouting to work, the heading is wrong. (The consumer system does
-the opposite, deliberately; don't carry its casing across.)
+headers. No `letter-spacing`, no `text-transform`. (The consumer system does the
+opposite, deliberately; don't carry its casing across.)
 
-**Depth is calibrated to a non-technical evaluator.** The shared rule against
-diluting substance still holds — but the reader here may be an office manager or
-a practice administrator, not an enthusiast. Leaving them over their head is a
-failure, not a filter. Keep the real machinery on the page and make the sentence
-around it plain.
+**Close on a kicker.** The recurring rhetorical move is a single line that
+concedes or reframes, set apart after the substance — "You probably won't need
+us much. That's the point." Use `g-kicker`; one per section, never two.
 
-**Proof is contractual, not social.** Cost comparisons, warranty terms, support
-availability, and who owns what at the end of the agreement. Reviews carry the
-consumer register; terms carry this one.
+## What Start9 Business Services sells
 
-**The primary action is always a conversation, never a checkout.** Professional
-Services is a consultative funnel and the design must not blur that.
+Copy in this register should be able to fall back to these facts. The canonical
+source is `_core.md` in the business-services deck program — **check its version
+line before trusting anything below.**
 
-## What Professional Services sells
+**The offering.** Off rented software, onto systems the customer owns. Start9
+assesses, recommends, deploys, trains, and supports — then repeats with the next
+application when the customer says so.
 
-Copy in this register should be able to fall back to these facts.
+**The price.** $20,000/year, rolling one-year commitment. No per-seat pricing,
+no setup fee, no support tiers. The assessment is free with no obligation to
+proceed. Roughly 1/8 the cost of one competent sysadmin, for a team.
 
-**The offering.** Managed sovereign infrastructure under an annual support
-agreement. Start9 builds the hardware to order, runs and maintains it, trains
-staff, and provides 24/7/365 support. The organization owns the hardware and the
-data; Start9 is the outsourced technical team.
+**The hardware.** Bought by the customer directly, at cost, zero Start9 markup.
+Theirs on day one and if they leave.
 
-**Who it's for.** Organizations needing privacy and sovereignty without running
-IT in-house — newsrooms, clinics, law firms, family offices, nonprofits,
-privacy-sensitive businesses.
+**The four phases.** Assess (free, five questions per application: cost,
+privacy, security, alternatives, transition) → Recommend (hardware and where it
+lives: office, colocation, VPS, or a mix) → Deploy and train (on-site or remote)
+→ Support. Then again with the next application, at the customer's pace.
 
-**What's included.** Build-to-order hardware · onboarding and staff training ·
-24/7/365 on-demand support · ongoing maintenance, updates, and monitoring.
+**The stack.** StartOS · StartWRT · StartTunnel · security cameras (soon).
 
-**How it works.** Talk → we scope and build → onboard and train → we support,
-indefinitely.
+**The support model.** A dedicated account manager who knows the business by
+name, human technicians off-hours, an AI agent running on Start9 GPUs so
+inference never leaves, and one private space. 24/7/365.
 
-**The model.** Quote-based, because every deployment is built to order. There is
-no price list, and the page says so rather than implying one exists.
+**No lock-in.** Non-proprietary hardware, 100% open source. Walk away and it
+keeps running.
+
+**The audience, in build order.** Bitcoin and digital-asset businesses ·
+professional services, agencies, consultancies · law firms · accounting, CPA,
+wealth management · lawful high-risk merchant categories. Journalism and
+nonprofits are **blocked on pricing**, and vertically-locked SMB — trades,
+restaurants, retail, dental, medical — is deliberately not pursued. Don't put
+either group in audience copy.
 
 **The three arguments, in order of weight.**
 
-1. **Privacy** — no third party can read the data, because no third party holds
-   it.
-2. **Security** — one tenant, one perimeter, no shared-SaaS blast radius, and
-   updates that stay explicit and reviewed.
-3. **Cost** — capital hardware you own against a per-seat annual subscription
-   that never stops. Show the arithmetic; don't assert the conclusion.
+1. **Cost** — the largest and most legible. Show the arithmetic and the source;
+   never assert a percentage on its own.
+2. **Control** — no vendor able to reprice, reclassify, or switch them off.
+3. **Privacy** — fewer third parties holding the data, and a smaller blast
+   radius when one of them is breached. Argue attacker economics, not obscurity.
 
 ## Palette
 
@@ -147,21 +177,41 @@ hierarchy alone.
 | `g-empty`        | Dashed honest-placeholder for proof that doesn't exist yet        |
 | `g-specs`        | Definition grid — specs, terms, what's included                   |
 | `g-compare`      | Comparison table; the Start9 column is last and tinted            |
+| `g-kicker`       | The closing line that concedes or reframes; one per section        |
+| `g-concession`   | A volunteered weakness, given weight rather than demoted          |
+| `g-figures` / `g-figure` | Headline figure paired with the defensible one            |
+| `g-provenance`   | Basis-and-date line under any table of figures                    |
 | `g-primary` … `g-negative` | Text color utilities                                    |
 
 Their `!important` is by design. Nowhere else in the system uses it.
 
-## The two patterns that carry the argument
+## The patterns that carry the argument
 
-**`g-compare` — cost and capability.** The Start9 column goes last and takes the
-pale accent tint. **Every table must be followed by a `<small class="g-tertiary">`
-footnote naming the source and date of the figures.** The honest comparison is
-the whole argument, so it has to be checkable. Never assert a savings percentage;
-show the arithmetic and let the reader conclude.
+**`g-concession` — the volunteered weakness.** The single highest-trust move
+available in this register, so it gets weight rather than losing it: same ink,
+same size as the claim it qualifies, marked by a rule instead of demoted by a
+muted color or smaller type. If a concession reads as fine print, the design has
+inverted its purpose. Use it for the uptime tradeoff, the thing with no
+open-source replacement, the part of Start9's own house that isn't in order yet.
+
+**`g-compare` — cost and capability.** Start9's column goes last and takes the
+pale accent tint. The row carrying a concession takes `.is-concession` and is
+marked, never omitted. **Every table is followed by `g-provenance`** naming the
+basis and the verification date of its figures — the honest comparison is the
+whole argument, so it has to be checkable, and a stale number discredits the
+rest.
+
+**`g-figures` — headline and defensible together.** Lead with the strong number,
+then volunteer the conservative one beside it, not beneath it. Raising it
+yourself is what makes the first one believable.
+
+**`g-kicker` — the closing line.** One per section, after the substance,
+conceding or reframing. It is the line the reader leaves with, so it is
+full-ink and larger than body copy — never an aside.
 
 **`g-empty` — missing proof.** Dashed and intentionally unfilled, so it reads as
-a gap rather than a design. Use it wherever case studies, reviews, or metrics
-don't exist yet. Never fill the hole with something invented.
+a gap rather than a design. Use it wherever case studies, reviews, or reference
+customers don't exist yet. Never fill the hole with a composite.
 
 ## Using it with Taiga UI
 

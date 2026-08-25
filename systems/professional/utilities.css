@@ -211,6 +211,76 @@ a {
   color: var(--s9-ink-tertiary);
 }
 
+/* ── Kicker — the closing line that concedes or reframes ─────────────
+ * Set apart after the substance, one per section. Full-ink and larger than
+ * body: this is the line the reader leaves with, not an aside. */
+.g-kicker {
+  margin-top: 1.25rem;
+  padding-inline-start: 1rem;
+  border-inline-start: 2px solid var(--s9-accent);
+  color: var(--s9-ink);
+  font: var(--s9-text-body-l);
+  max-width: var(--s9-prose-max);
+}
+
+/* ── Concession — the volunteered weakness ───────────────────────────
+ * Never smaller, quieter, or later than the claim it qualifies. Same ink,
+ * same size, marked by a rule rather than demoted by color. */
+.g-concession {
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--s9-border);
+  border-inline-start: 3px solid var(--s9-ink);
+  border-radius: var(--s9-radius-m);
+  background: var(--s9-ground);
+  color: var(--s9-ink);
+  max-width: var(--s9-prose-max);
+}
+
+/* Row of a comparison table carrying a concession — the line that stays,
+ * the thing with no replacement. Marked, not hidden. */
+.g-compare tr.is-concession td,
+.g-compare tr.is-concession th {
+  background: var(--s9-ground-sunken);
+  font-weight: 600;
+  color: var(--s9-ink);
+}
+
+/* ── Figure pair — headline number and the defensible one ────────────
+ * Both on screen together. The second is not a footnote. */
+.g-figures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-block: 0.5rem;
+}
+
+.g-figure {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.g-figure > b {
+  font: var(--s9-text-h2);
+  color: var(--s9-accent);
+}
+
+.g-figure > span {
+  font: var(--s9-text-body-s);
+  color: var(--s9-ink-secondary);
+}
+
+.g-figure--defensible > b {
+  color: var(--s9-ink);
+}
+
+/* ── Provenance — the basis-and-date line under a table ──────────────
+ * Mandatory wherever a figure appears. */
+.g-provenance {
+  font: var(--s9-text-body-s);
+  color: var(--s9-ink-tertiary);
+}
+
 /* ── Definition grid — specs, terms, included-in-the-agreement lists ─── */
 .g-specs {
   margin: 0;

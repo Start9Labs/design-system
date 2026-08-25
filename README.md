@@ -9,10 +9,10 @@ editorial voice that governs all of it.
 
 | System                                   | Register                                                                                                        | Ground          | Accent            | Used by                          |
 | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------- | ----------------- | -------------------------------- |
-| [**Professional**](systems/professional) | Institutional. Sober, legible, dense with substance. Sells privacy, security, and cost control to organizations. | Light `#ffffff` | Blue `#3880ff`    | start9-store, Professional Services |
+| [**Professional**](systems/professional) | Institutional. Sober, legible, concessive. Argues cost, then control, then privacy — to organizations. | Light `#ffffff` | Blue `#3880ff`    | start9-store, Business Services |
 | [**Consumer**](systems/consumer)         | Enthusiast. Dark, high-contrast, display-typographic. Sells sovereignty to individuals.                          | Dark `#333333`  | Red `#ff4961`     | start9.com, decks, campaigns     |
 
-**Both systems are live.** start9-store and everything Professional Services
+**Both systems are live.** start9-store and everything Start9 Business Services
 touches use Professional; product marketing, campaign pages, decks, and mockups
 aimed at individuals use Consumer. Pick by audience, not by recency — and when
 a piece genuinely straddles the two, pick one and commit. They never blend.
