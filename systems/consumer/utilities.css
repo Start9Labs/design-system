@@ -1,0 +1,283 @@
+/* Start9 Consumer — component vocabulary.
+ *
+ * Global c-* classes, extracted from the start9.com implementation. The
+ * reference site is a bespoke per-page build; this is the recurring vocabulary
+ * lifted out of it so decks, mockups, and new pages stay on-system.
+ *
+ * Requires tokens.css.
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ── Ground ──────────────────────────────────────────────────────────
+ * The page is a flat gray blended over a photographic backdrop, fixed so it
+ * doesn't scroll. Swap the image; keep the blend. */
+.c-ground {
+  background:
+    linear-gradient(0deg, var(--s9c-ground), var(--s9c-ground)),
+    var(--c-ground-image, none);
+  background-blend-mode: color, normal;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* ── Type ────────────────────────────────────────────────────────────
+ * Three heading treatments, and they are not a size ramp — they are three
+ * different jobs. */
+
+/* The hero line. Basis Grotesque Pro, sentence case, very large, tight. */
+.c-hero {
+  margin: 0;
+  font-family: var(--s9c-font-hero);
+  font-size: min(3.8rem, 171px);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--s9c-ink);
+}
+
+/* Section headline. Same face, uppercase, larger. */
+.c-headline {
+  margin: 0;
+  font-family: var(--s9c-font-hero);
+  font-size: 7rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--s9c-ink);
+}
+
+/* The display slab. Tusker Grotesk — condensed, uppercase, and set at a LOW
+ * weight at large sizes. Reserve it for one or two moments per page. */
+.c-display {
+  margin: 0;
+  font-family: var(--s9c-font-display);
+  font-size: max(4rem, 16pt);
+  font-weight: 100;
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: var(--s9c-ink);
+}
+
+/* Emphasis heading — red, for sub-headings on content pages. */
+.c-subhead {
+  margin: 0;
+  font-family: var(--s9c-font-hero);
+  font-size: 1.8rem;
+  color: var(--s9c-accent);
+}
+
+/* Eyebrow / label / nav item. Uppercase and tracked — the system's texture. */
+.c-eyebrow {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.1ch;
+  color: var(--s9c-ink);
+}
+
+.c-body {
+  font-family: var(--s9c-font-body);
+  font-weight: 300;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: var(--s9c-ink);
+  max-width: min(50ch, 73vw);
+}
+
+/* <em> is never italic in this system — it is weight emphasis. */
+.c-hero em,
+.c-headline em,
+.c-display em,
+.c-body em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* ── Action ──────────────────────────────────────────────────────────
+ * Violet, not red. Pill by default; --boxy for in-form and in-card buttons. */
+.c-btn {
+  display: inline-block;
+  padding: 0.7rem 1.7rem;
+  border: 0;
+  border-radius: var(--s9c-radius-button);
+  background: var(--s9c-action);
+  color: #fff;
+  font-family: var(--s9c-font-body);
+  font-weight: 400;
+  font-size: 1.3rem;
+  text-decoration: none;
+  box-shadow: var(--s9c-shadow-lift);
+  transition: var(--s9c-transition);
+  cursor: pointer;
+}
+
+.c-btn:hover {
+  transform: scale(1.03);
+  filter: brightness(120%);
+}
+
+.c-btn--boxy {
+  border-radius: var(--s9c-radius-s);
+}
+
+/* Pill tag — red, inverts on hover. Bylines, "open source" flags, categories. */
+.c-pill {
+  display: inline-block;
+  padding: 0.15em 0.6em;
+  border-radius: var(--s9c-radius-pill);
+  background: var(--s9c-accent);
+  color: var(--s9c-ink);
+  white-space: nowrap;
+  transition: var(--s9c-transition);
+}
+
+a:hover > .c-pill {
+  background: var(--s9c-ink);
+  color: var(--s9c-accent);
+}
+
+/* ── Surfaces ────────────────────────────────────────────────────────
+ * Depth comes from blur and scrim, never from a lighter gray. */
+
+/* Inverted panel — light scrim, blurred, text flips dark. */
+.c-panel-inverse {
+  background: var(--s9c-light-20);
+  backdrop-filter: blur(1rem);
+  color: var(--s9c-ink-offset);
+}
+
+.c-panel-inverse .c-hero,
+.c-panel-inverse .c-headline,
+.c-panel-inverse .c-body {
+  color: var(--s9c-ink-offset);
+}
+
+/* Subtle panel — dark scrim, blurred. Recedes rather than advances. */
+.c-panel-subtle {
+  background: var(--s9c-dark-20);
+  backdrop-filter: blur(1rem);
+}
+
+.c-panel-shadow {
+  box-shadow: var(--s9c-shadow-far);
+}
+
+/* Glass tile — the product-card treatment. --dark for the recessed variant. */
+.c-glass {
+  background: var(--s9c-glass);
+}
+
+.c-glass--dark {
+  background: var(--s9c-glass-dark);
+}
+
+/* ── Rules and frames ───────────────────────────────────────────────
+ * Hairline white, solid to frame a section, dashed to divide a grid. */
+.c-ruled {
+  border-top: var(--s9c-border);
+  border-bottom: var(--s9c-border);
+}
+
+.c-framed {
+  border: var(--s9c-border);
+}
+
+/* Dashed grid — three across, interior dividers only. The signature layout for
+ * a feature list. */
+.c-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.c-grid > li {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+  border-right: var(--s9c-border-dashed);
+  border-bottom: var(--s9c-border-dashed);
+}
+
+.c-grid > li:nth-child(3n) {
+  border-right: none;
+}
+
+.c-grid > li:nth-child(n + 4) {
+  border-bottom: none;
+}
+
+/* ── Connector ───────────────────────────────────────────────────────
+ * The hairline SVG paths that thread one section into the next. Give the
+ * <svg> this class; non-scaling-stroke keeps the line 1px at any scale. */
+.c-connector path {
+  stroke: var(--s9c-line);
+  stroke-width: 1px;
+  fill: none;
+  vector-effect: non-scaling-stroke;
+}
+
+/* ── Hover ───────────────────────────────────────────────────────────
+ * Scale up slightly and flip to red. The system's whole interaction language. */
+.c-lift {
+  transition: var(--s9c-transition);
+}
+
+.c-lift:hover {
+  transform: scale(1.05);
+  color: var(--s9c-accent);
+}
+
+/* ── Layout ──────────────────────────────────────────────────────────
+ * Viewport-relative, not width-capped — the consumer system fills the screen.
+ * There is no --page-max here; that is the professional system's idea. */
+.c-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+  padding: 6vh 6rem;
+}
+
+.c-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.c-cols {
+  display: flex;
+  gap: 6rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* ── Text color utilities ────────────────────────────────────────── */
+.c-accent {
+  color: var(--s9c-accent) !important;
+}
+
+.c-muted {
+  color: var(--s9c-ink-muted) !important;
+}
+
+.c-bitcoin {
+  color: var(--s9c-bitcoin) !important;
+}
+
+.c-lightning {
+  color: var(--s9c-lightning) !important;
+}

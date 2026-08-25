@@ -1,0 +1,45 @@
+/* Maps Taiga UI 5's tokens onto the Start9 Professional palette.
+ *
+ * Load AFTER taiga-ui-theme.less and after tokens.css. Same specificity as
+ * Taiga's own .light() defaults, so source order decides — later wins.
+ *
+ * Only tokens that differ from Taiga stock are listed.
+ */
+
+:root,
+[tuiTheme='light'] {
+  --tui-background-accent-1: var(--s9-accent);
+  --tui-background-accent-1-hover: var(--s9-accent-hover);
+  --tui-background-accent-1-pressed: var(--s9-accent-pressed);
+  --tui-background-accent-2: var(--s9-accent-2);
+  --tui-background-accent-2-hover: var(--s9-accent-2-hover);
+  --tui-background-accent-2-pressed: var(--s9-accent-2-pressed);
+  --tui-background-accent-opposite: var(--s9-accent-opposite);
+  --tui-background-accent-opposite-hover: var(--s9-accent-opposite-hover);
+  --tui-background-accent-opposite-pressed: var(--s9-accent-opposite-pressed);
+
+  --tui-service-selection-background: var(--s9-negative);
+
+  --tui-status-negative: var(--s9-negative);
+  --tui-status-negative-pale: var(--s9-negative-pale);
+  --tui-status-negative-pale-hover: rgb(255 73 97 / 0.24);
+  --tui-status-positive: var(--s9-positive);
+  --tui-status-positive-pale: var(--s9-positive-pale);
+  --tui-status-positive-pale-hover: rgb(45 213 91 / 0.4);
+  --tui-status-warning: var(--s9-warning);
+  --tui-status-warning-pale: var(--s9-warning-pale);
+  --tui-status-warning-pale-hover: rgb(255 196 9 / 0.4);
+
+  --tui-text-primary: var(--s9-ink);
+  --tui-text-secondary: var(--s9-ink-secondary);
+  --tui-text-tertiary: var(--s9-ink-tertiary);
+  --tui-text-action: var(--s9-accent);
+  --tui-text-action-hover: var(--s9-accent-hover);
+  --tui-text-positive: var(--s9-positive);
+  --tui-text-positive-hover: var(--s9-positive-hover);
+  --tui-text-negative: var(--s9-negative);
+  --tui-text-negative-hover: var(--s9-negative-hover);
+
+  --tui-stroke-width: var(--s9-stroke-width);
+  --tui-radius-m: var(--s9-radius-m);
+}

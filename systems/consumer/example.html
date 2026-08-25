@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Start9 Consumer — reference page</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;900&display=swap"
+    />
+    <link rel="stylesheet" href="tokens.css" />
+    <link rel="stylesheet" href="utilities.css" />
+    <style>
+      /* The two display faces are commercially licensed and not shipped here,
+         so this page falls back to Montserrat for them. On a real build, load
+         Basis Grotesque Pro and Tusker Grotesk and delete this block. */
+      :root {
+        --s9c-font-hero: 'Montserrat', sans-serif;
+        --s9c-font-display: 'Montserrat', sans-serif;
+      }
+      body {
+        --c-ground-image: none;
+      }
+    </style>
+  </head>
+  <body class="c-ground">
+    <!-- Every recurring consumer pattern, once. Copy follows VOICE.md plus this
+         system's register: Title Case headings, uppercase chrome, free to run
+         technical. -->
+
+    <section class="c-section">
+      <span class="c-eyebrow">Sovereign computing</span>
+      <h1 class="c-hero">
+        Take back control of your <em>digital life</em>.
+      </h1>
+      <p class="c-body">
+        Your own server, in your own home, running the software you actually
+        use — file sync, photos, passwords, messaging, a Bitcoin node. No
+        accounts, no subscriptions, nobody else holding the keys.
+      </p>
+      <a class="c-btn" href="#">Get a server</a>
+    </section>
+
+    <!-- The connector: a hairline path threading one section into the next. -->
+    <svg class="c-connector" width="200" height="80" aria-hidden="true">
+      <path d="M100 0 L100 40 Q100 60 80 60 L0 60" />
+    </svg>
+
+    <!-- Display slab. Condensed, uppercase, low weight, used sparingly. -->
+    <section class="c-section c-ruled">
+      <h2 class="c-display">Be your own cloud</h2>
+      <p class="c-body">
+        StartOS is a full operating system for a personal server. It handles
+        networking, certificates, backups, updates, and Tor so that running a
+        service is one click rather than one weekend.
+      </p>
+    </section>
+
+    <!-- The dashed grid — the signature feature-list layout. -->
+    <section class="c-section">
+      <h2 class="c-headline">What you get</h2>
+      <ul class="c-grid">
+        <li>
+          <h3 class="c-eyebrow">Private by <em>default</em></h3>
+          <p class="c-body">
+            Every service is reachable over Tor or your own LAN. Nothing is
+            exposed unless you expose it.
+          </p>
+        </li>
+        <li>
+          <h3 class="c-eyebrow">Yours to <em>keep</em></h3>
+          <p class="c-body">
+            Open source, top to bottom. No license to renew and no vendor able
+            to discontinue your data.
+          </p>
+        </li>
+        <li>
+          <h3 class="c-eyebrow">One-click <em>services</em></h3>
+          <p class="c-body">
+            Nextcloud, Immich, Vaultwarden, Jellyfin, Bitcoin Core, and more
+            from the marketplace.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Glass tiles — the product-card treatment. -->
+    <section class="c-section">
+      <div class="c-cols">
+        <a class="c-glass c-framed c-lift" href="#" style="padding: 3rem">
+          <div class="c-stack">
+            <span class="c-eyebrow">Buy it built</span>
+            <h3 class="c-headline" style="font-size: 3rem">Server One</h3>
+            <p class="c-body">Assembled, warrantied, supported for life.</p>
+          </div>
+        </a>
+        <a class="c-glass--dark c-framed c-lift" href="#" style="padding: 3rem">
+          <div class="c-stack">
+            <span class="c-eyebrow">Or build your own</span>
+            <h3 class="c-headline" style="font-size: 3rem">Download</h3>
+            <p class="c-body">Free, on hardware you already own.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Inverted panel — light scrim, blurred, text flips dark. -->
+    <section class="c-section c-panel-inverse c-panel-shadow">
+      <h2 class="c-headline">Powered by StartOS</h2>
+      <p class="c-body">
+        Every service in the marketplace is packaged, signed, and reproducible.
+        <a href="#"><span class="c-pill">See the source</span></a>
+      </p>
+    </section>
+
+    <!-- Recessed panel — dark scrim. -->
+    <section class="c-section c-panel-subtle">
+      <h2 class="c-subhead">Free unless you want to pay</h2>
+      <p class="c-body">
+        The software is free and always will be. Buying the hardware gets you a
+        warranty, lifetime support, and funds the free work everyone uses.
+      </p>
+      <a class="c-btn c-btn--boxy" href="#">Talk to us</a>
+    </section>
+  </body>
+</html>

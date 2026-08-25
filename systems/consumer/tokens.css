@@ -1,0 +1,102 @@
+/* Start9 Consumer — design tokens.
+ *
+ * Dark, high-contrast, display-typographic. The enthusiast register: product
+ * marketing, campaign pages, decks, and mockups aimed at people who already
+ * care about sovereign computing.
+ *
+ * Values transcribed from the start9.com stylesheet, which is the reference
+ * implementation.
+ */
+
+:root {
+  color-scheme: dark;
+
+  /* ── Red — the identity accent ──────────────────────────────────────
+   * Start9's signature color. Links, hover states, emphasis headings, pills,
+   * SVG fills, the scrollbar thumb. It is NOT the button color — see violet. */
+  --s9c-red-light: #ee6570;
+  --s9c-red: #ff4961;
+  --s9c-red-deep: #e84258;
+  --s9c-red-shadow: #993e4a; /* the 3D shadow under raised elements */
+
+  /* ── Violet — the action color ──────────────────────────────────────
+   * Every button, form focus ring, and date badge. Counterintuitive next to
+   * the red identity, and deliberate: the CTA does not compete with the brand. */
+  --s9c-violet: #6866cc;
+
+  /* ── Gray ───────────────────────────────────────────────────────────── */
+  --s9c-gray-1: #121212;
+  --s9c-gray-2: #333333; /* page ground */
+  --s9c-gray-3: #828282;
+  --s9c-gray-4: #d1d1d1;
+  --s9c-gray-5: #e0e0e0;
+  --s9c-gray-6: #f4f4f5;
+  --s9c-gray-7: #1e1e1e;
+
+  /* ── Roles ──────────────────────────────────────────────────────────── */
+  --s9c-ground: var(--s9c-gray-2);
+  --s9c-ink: #ffffff;
+  --s9c-ink-offset: var(--s9c-gray-2); /* text on an inverted surface */
+  --s9c-ink-muted: var(--s9c-gray-5);
+  --s9c-line: #ffffff;
+  --s9c-accent: var(--s9c-red);
+  --s9c-action: var(--s9c-violet);
+
+  /* ── Status ─────────────────────────────────────────────────────────── */
+  --s9c-success: #27b45f;
+  --s9c-negative: #e43434;
+
+  /* ── Domain accents — used when the subject is that network ─────────── */
+  --s9c-bitcoin: #f7931a;
+  --s9c-lightning: #7b1af8;
+
+  /* ── Scrims ─────────────────────────────────────────────────────────── */
+  --s9c-light-05: rgb(255 255 255 / 0.05);
+  --s9c-light-10: rgb(255 255 255 / 0.1);
+  --s9c-light-20: rgb(255 255 255 / 0.2);
+  --s9c-dark-10: rgb(0 0 0 / 0.1);
+  --s9c-dark-20: rgb(0 0 0 / 0.2);
+
+  /* ── Surface treatments — the consumer signatures ───────────────────
+   * None of these exist in the professional system. They are the clearest
+   * marker of which register you are in. */
+  --s9c-glass: linear-gradient(
+    45deg,
+    rgb(255 255 255 / 0),
+    rgb(255 255 255 / 0.05)
+  );
+  --s9c-glass-dark: linear-gradient(45deg, rgb(0 0 0 / 0), rgb(0 0 0 / 0.25));
+  --s9c-shadow-near: 0 1rem 2rem 0 rgb(0 0 0 / 0.4);
+  --s9c-shadow-far: 0 3rem 3rem 0 rgb(0 0 0 / 0.5);
+  --s9c-shadow-lift: 0 1rem 1rem -0.5rem rgb(0 0 0 / 0.2); /* under buttons */
+
+  --s9c-border: 1px solid var(--s9c-line);
+  --s9c-border-dashed: 1px dashed var(--s9c-line);
+
+  --s9c-radius-pill: 999px;
+  --s9c-radius-button: 34px;
+  --s9c-radius-s: 10px;
+
+  --s9c-transition: all 0.2s ease-in-out;
+
+  /* ── Type ───────────────────────────────────────────────────────────
+   * Five families. Both display faces are commercially licensed — see README. */
+  --s9c-font-hero: 'Basis Grotesque Pro', sans-serif;
+  --s9c-font-display: 'Tusker Grotesk 5500', sans-serif;
+  --s9c-font-body: 'Montserrat', sans-serif;
+  --s9c-font-mono-accent: 'Arkibal Mono', monospace;
+  --s9c-font-mono-copy: 'Liberation Mono', monospace;
+  --s9c-font-button: 'Basis Grotesque Mono Pro', monospace;
+}
+
+/* Viewport-relative root sizing — the whole page scales with the window rather
+ * than stepping at breakpoints, so every rem below is a fraction of the
+ * viewport. This is a defining trait of the consumer system and it is NOT
+ * carried into the professional one. */
+html {
+  font-size: max(2vmin, 10px);
+  font-family: var(--s9c-font-body);
+  font-weight: 200;
+  color: var(--s9c-ink);
+  background: var(--s9c-ground);
+}

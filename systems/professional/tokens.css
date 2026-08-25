@@ -1,0 +1,91 @@
+/* Start9 Professional — design tokens.
+ *
+ * Light only. There is no dark variant of this system by design; the consumer
+ * system is the dark one and they are not two modes of one thing.
+ *
+ * Plain custom properties, no build step. For Taiga UI apps, load
+ * taiga-bridge.css after this file.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* ── Ground ─────────────────────────────────────────────────────────── */
+  --s9-ground: #ffffff;
+  --s9-ground-alt: #f5f6f8; /* alternating section bands */
+  --s9-ground-sunken: #eef0f3; /* inline notes, code, table stripes */
+
+  /* ── Text ───────────────────────────────────────────────────────────── */
+  --s9-ink: #0b0c10;
+  --s9-ink-secondary: rgb(11 12 16 / 0.65);
+  --s9-ink-tertiary: rgb(11 12 16 / 0.4);
+
+  /* ── Accent ─────────────────────────────────────────────────────────── */
+  /* Blue is the action color: links, primary buttons, the highlighted column
+   * of a comparison table. */
+  --s9-accent: #3880ff;
+  --s9-accent-hover: #4e8dff;
+  --s9-accent-pressed: #1165d9;
+
+  /* Magenta is the secondary accent. Use it sparingly and never as a
+   * page-level wash — it is a highlight, not a surface. */
+  --s9-accent-2: #c4247a;
+  --s9-accent-2-hover: #e12a8b;
+  --s9-accent-2-pressed: #b31a6c;
+
+  /* Near-black, for buttons that must outrank the blue one. */
+  --s9-accent-opposite: #0b0c10;
+  --s9-accent-opposite-hover: #14151c;
+  --s9-accent-opposite-pressed: #07080c;
+
+  /* ── Status ─────────────────────────────────────────────────────────── */
+  --s9-positive: #2dd55b;
+  --s9-positive-hover: #4ade80;
+  --s9-positive-pale: rgb(45 213 91 / 0.32);
+  --s9-negative: #ff4961;
+  --s9-negative-hover: #ff5f74;
+  --s9-negative-pale: rgb(255 73 97 / 0.12);
+  --s9-warning: #ffc409;
+  --s9-warning-pale: rgb(255 196 9 / 0.32);
+
+  /* ── Line ───────────────────────────────────────────────────────────── */
+  /* Separation comes from hairlines and background tints. There is no
+   * elevation color in this system — surfaces do not lighten to come forward. */
+  --s9-border: rgb(11 12 16 / 0.12);
+  --s9-stroke-width: 1.5px;
+
+  /* ── Shape ──────────────────────────────────────────────────────────── */
+  /* Sharper than typical. Nothing is a pill except a chip. */
+  --s9-radius-xs: 0.25rem;
+  --s9-radius-s: 0.375rem;
+  --s9-radius-m: 0.5rem;
+  --s9-radius-l: 0.75rem;
+
+  /* One shadow. Cards and the sticky header, nothing else. */
+  --s9-shadow: 0 1px 2px rgb(11 12 16 / 0.06), 0 2px 8px rgb(11 12 16 / 0.04);
+
+  /* ── Layout ─────────────────────────────────────────────────────────── */
+  /* One content width for the whole site. Backgrounds are full-bleed; content
+   * columns cap and center, so header, footer, and every section align. */
+  --s9-page-max: 84rem;
+  --s9-page-gutter: 2rem;
+  --s9-page-padding: max(
+    var(--s9-page-gutter),
+    calc((100vw - var(--s9-page-max)) / 2 + var(--s9-page-gutter))
+  );
+  --s9-prose-max: 52rem; /* line-length cap for body copy */
+  --s9-band-padding: clamp(2.5rem, 6vw, 5rem);
+
+  /* ── Type ───────────────────────────────────────────────────────────── */
+  /* One family for everything. This system has no display face — a heading
+   * earns its weight from size and hierarchy, never from a second typeface. */
+  --s9-font: Manrope, ui-sans-serif, system-ui, sans-serif;
+  --s9-font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --s9-text-h1: 700 2.5rem / 1.15 var(--s9-font);
+  --s9-text-h2: 700 1.75rem / 1.2 var(--s9-font);
+  --s9-text-h3: 600 1.25rem / 1.3 var(--s9-font);
+  --s9-text-body-l: 400 1.0625rem / 1.6 var(--s9-font);
+  --s9-text-body-m: 400 0.9375rem / 1.6 var(--s9-font);
+  --s9-text-body-s: 400 0.8125rem / 1.5 var(--s9-font);
+}

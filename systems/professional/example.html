@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Start9 Professional Services — reference page</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="tokens.css" />
+    <link rel="stylesheet" href="utilities.css" />
+  </head>
+  <body>
+    <!-- The Professional Services page, built entirely from the g-* vocabulary.
+         Every pattern in this system appears once. Copy follows VOICE.md. -->
+
+    <!-- Page header. Snug to the top, flush to the first band below — the next
+         band's own top padding supplies the gap. -->
+    <header class="g-band" style="padding-block: 3rem 0">
+      <div class="g-wrap">
+        <h1>For organizations</h1>
+        <p class="g-lead">
+          Managed infrastructure for organizations. Start9 builds the hardware
+          to order, runs and maintains it, trains staff, and provides 24/7/365
+          support under an annual support agreement. You own the hardware and
+          the data.
+        </p>
+        <div class="g-actions">
+          <a class="g-button" href="#contact">Talk to us</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="g-band">
+      <div class="g-wrap">
+        <h2>What it is</h2>
+        <p>
+          A managed service in which Start9 operates self-hosted infrastructure
+          on behalf of an organization. The organization owns the hardware and
+          the data; Start9 builds the servers, runs them, keeps them updated,
+          and provides support. The infrastructure runs on the organization's
+          own equipment; the difference from the rest of the catalog is that
+          Start9 handles operation and maintenance.
+        </p>
+      </div>
+    </section>
+
+    <section class="g-band g-band--alt">
+      <div class="g-wrap">
+        <h2>Who it's for</h2>
+        <p>
+          Organizations that need private, self-hosted infrastructure without
+          running IT in-house:
+        </p>
+        <ul class="g-chips" aria-label="Organizations this service is built for">
+          <li>Newsrooms</li>
+          <li>Clinics</li>
+          <li>Law firms</li>
+          <li>Family offices</li>
+          <li>Nonprofits</li>
+          <li>Privacy-sensitive businesses</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="g-band">
+      <div class="g-wrap">
+        <h2>What's included</h2>
+        <ul class="g-points">
+          <li>
+            <strong>Build-to-order hardware.</strong> Servers configured for the
+            organization's requirements, assembled and warrantied.
+          </li>
+          <li>
+            <strong>Onboarding and staff training.</strong> Start9 sets up the
+            systems and trains staff to use them. No prior self-hosting
+            experience is required.
+          </li>
+          <li>
+            <strong>24/7/365 support.</strong> On-demand access to the Start9
+            support team, every day of the year.
+          </li>
+          <li>
+            <strong>Maintenance, updates, and monitoring.</strong> Start9 keeps
+            the systems patched and monitored. Updates remain explicit and
+            reviewed; nothing is applied without the organization's involvement.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="g-band g-band--alt">
+      <div class="g-wrap">
+        <h2>How it works</h2>
+        <ol class="g-steps">
+          <li>
+            <strong>Scope.</strong> The organization describes its requirements
+            and what it needs to run privately.
+          </li>
+          <li>
+            <strong>Build.</strong> Start9 designs the setup and builds the
+            hardware to order.
+          </li>
+          <li>
+            <strong>Onboard and train.</strong> Start9 installs the systems,
+            hands them over, and trains staff to use them.
+          </li>
+          <li>
+            <strong>Support.</strong> Start9 maintains and supports the systems
+            for the term of the agreement.
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- The comparison pattern. Start9's column is last and carries the pale
+         accent tint. The footnote naming source and date is mandatory: the
+         honest comparison is the argument, so it has to be checkable. -->
+    <section class="g-band">
+      <div class="g-wrap">
+        <h2>The hardware</h2>
+        <p>
+          Deployments are built on Server One. Against the comparable machines
+          on the market:
+        </p>
+        <div class="g-compare">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Umbrel Home</th>
+                <th scope="col">Umbrel Pro</th>
+                <th scope="col">Server One</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Processor</th>
+                <td>Intel N150</td>
+                <td>Intel Core i3-N300</td>
+                <td>AMD Ryzen 7 6800H</td>
+              </tr>
+              <tr>
+                <th scope="row">CPU benchmark</th>
+                <td>5,388 — 1×</td>
+                <td>8,101 — 1.5×</td>
+                <td>22,796 — 4.2×</td>
+              </tr>
+              <tr>
+                <th scope="row">Memory</th>
+                <td>16GB DDR5</td>
+                <td>16GB LPDDR5</td>
+                <td>16GB or 32GB LPDDR5</td>
+              </tr>
+              <tr>
+                <th scope="row">Price</th>
+                <td>$699</td>
+                <td>$999</td>
+                <td>$899</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <small class="g-tertiary">
+          CPU benchmark: PassMark CPU Mark (multithread), June 2026; multiples
+          are relative to Umbrel Home. Prices compare the 2TB storage / 16GB
+          memory configuration of each device.
+        </small>
+      </div>
+    </section>
+
+    <!-- Honest placeholder. Where the proof does not exist yet, say so. -->
+    <section class="g-band g-band--alt">
+      <div class="g-wrap">
+        <h2>Case studies</h2>
+        <div class="g-empty">
+          Case studies from organizations have not yet been published.
+        </div>
+      </div>
+    </section>
+
+    <section class="g-band" id="contact">
+      <div class="g-wrap">
+        <h2>Pricing</h2>
+        <p>
+          An annual support agreement. Because each deployment is built to
+          order, pricing is quote-based: there is no fixed price list. Tell us
+          what you need and we'll scope it.
+        </p>
+        <div class="g-note">
+          The organization owns the hardware outright. If the agreement ends,
+          the infrastructure keeps running and the data never moves.
+        </div>
+        <div class="g-actions">
+          <a class="g-button" href="#contact">Talk to us</a>
+          <a class="g-button g-button--outline" href="#contact">See the terms</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
